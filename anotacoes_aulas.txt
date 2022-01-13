@@ -82,3 +82,18 @@ Componente Navbar
 	-> criar pasta components dentro de src
 		-> cria subpastas dentro dela para cada componente
 		-> cria um index.tsx
+
+<nav className="container"> 		-> do bootstrap
+
+
+
+bootstrap: breakpoints 
+	-> grid system: tela dividida em 12 partes e pode ocupar de forma customizada
+		-> define a partir dos breakpoints, dizendo a partir de determinada largura de tela, ocupar x espaços
+		-> em um sistema de row e col
+	col-sm-6 col-lg-4 col-xl-3
+	-> significa: até tamanho sm, cada um ocupa 6 espaços; até lg, ocupa 4 (mostra 3 por linha); xl ou mais, ocupa 3 (mostra 4 por linha)
+
+-> quando retorna "html" dentro das funções, caso tenha mais de uma para mostrar, precisa estar "encapsulada", pode ser uma div ou ainda apenas com <> </>, que não altera nada mas é aceito
+
+-> colocar variáveis dentro de tags: <... {`variavel`}>
