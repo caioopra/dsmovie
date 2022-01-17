@@ -7,7 +7,7 @@ import { BASE_URL } from "utils/requests";
 
 function Listing() {
 
-    const [pageNumber, setPageNumber] = useState(0);  // manter estado no componente
+    const [pageNumber, setPageNumber] = useState(0);  // manter estado no componente; pageNumber inicia com 0
 
     const [page, setPage] = useState<MoviePage>({  // estado que guarda a pagina que veio na requisicao
         content: [],
@@ -29,9 +29,13 @@ function Listing() {
             });
     }, [pageNumber]);  // quyando mudar o pageNumber, faz de novo a requisicao, mudando o valor da pagina
 
+    const handlePageChange = (newPageNumber : number) => {
+        setPageNumber(newPageNumber);
+    }
+
     return (
         <>
-            <Pagination />
+            <Pagination page={page} onChange={handlePageChange}/>
 
             <div className="container">
                 <div className="row">
